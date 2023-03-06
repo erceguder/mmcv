@@ -109,6 +109,11 @@ class BaseRunner(metaclass=ABCMeta):
         self.optimizer = optimizer
         self.logger = logger
         self.meta = meta
+
+        # flag to stop runner iteration early.
+        # Runner will stop even if max_steps / max_epoch is not yet reach.
+        self.should_stop = False
+
         # create work_dir
         if isinstance(work_dir, str):
             self.work_dir: Optional[str] = osp.abspath(work_dir)
