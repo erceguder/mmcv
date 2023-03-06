@@ -16,7 +16,7 @@ from .lr_updater import (CosineAnnealingLrUpdaterHook,
                          FlatCosineAnnealingLrUpdaterHook, InvLrUpdaterHook,
                          LinearAnnealingLrUpdaterHook, LrUpdaterHook,
                          OneCycleLrUpdaterHook, PolyLrUpdaterHook,
-                         StepLrUpdaterHook)
+                         StepLrUpdaterHook, ReduceLROnPlateauHook)
 from .memory import EmptyCacheHook
 from .momentum_updater import (CosineAnnealingMomentumUpdaterHook,
                                CyclicMomentumUpdaterHook,
@@ -45,5 +45,6 @@ __all__ = [
     'SyncBuffersHook', 'EMAHook', 'EvalHook', 'DistEvalHook', 'ProfilerHook',
     'GradientCumulativeOptimizerHook', 'GradientCumulativeFp16OptimizerHook',
     'SegmindLoggerHook', 'LinearAnnealingLrUpdaterHook',
-    'LinearAnnealingMomentumUpdaterHook', 'ClearMLLoggerHook', 'EarlyStoppingHook'
+    'LinearAnnealingMomentumUpdaterHook', 'ClearMLLoggerHook', 'EarlyStoppingHook',
+    'ReduceLROnPlateauHook'
 ]
