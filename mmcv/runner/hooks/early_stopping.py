@@ -231,7 +231,7 @@ class EarlyStoppingHook(Hook):
 
         return should_stop, reason
 
-    def _improvement_message(self, current: np.float) -> str:
+    def _improvement_message(self, current) -> str:
         """Formats a log message that informs the user about an improvement in
         the monitored score."""
         if np.isfinite(self.best_score):
